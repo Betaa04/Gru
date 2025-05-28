@@ -41,6 +41,7 @@ cd Gru
 
 python -m venv venv
 source venv/bin/activate   # Đối với macOS/Linux
+
 venv\Scripts\activate      # Đối với Windows
 
 ### 3. Cài đặt các thư viện phụ thuộc
