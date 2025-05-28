@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân Loại Từ Loại - GRU Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-brain"></i> Phân Loại Từ Loại Tiếng Việt</h1>
+            <p class="subtitle">Sử dụng mô hình GRU Deep Learning</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <h2>Nhập đoạn văn bản</h2>
+                <div class="text-input-container">
+                    <textarea id="textInput" placeholder="Nhập đoạn văn bản tiếng Việt cần phân loại từ loại..."></textarea>
+                    <div class="button-container">
+                        <button id="analyzeBtn" class="primary-btn"><i class="fas fa-magic"></i> Phân Loại</button>
+                        <button id="clearBtn" class="secondary-btn"><i class="fas fa-eraser"></i> Xóa</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h2>Kết quả phân loại</h2>
+                <div class="result-container">
+                    <div id="resultDisplay" class="result-display">
+                        <p class="placeholder-text">Kết quả phân loại sẽ hiển thị ở đây...</p>
+                    </div>
+                </div>
+                <div class="legend">
+                    <h3>Chú thích:</h3>
+                    <ul>
+                        <li><span class="tag noun">Danh từ</span> - Từ chỉ người, vật, hiện tượng</li>
+                        <li><span class="tag verb">Động từ</span> - Từ chỉ hành động, trạng thái</li>
+                        <li><span class="tag adj">Tính từ</span> - Từ chỉ tính chất, đặc điểm</li>
+                        <li><span class="tag adv">Trạng từ</span> - Từ bổ nghĩa cho động từ, tính từ</li>
+                        <li><span class="tag pron">Đại từ</span> - Từ thay thế cho danh từ</li>
+                        <li><span class="tag prep">Giới từ</span> - Từ chỉ quan hệ giữa các từ</li>
+                        <li><span class="tag conj">Liên từ</span> - Từ nối câu hoặc các phần của câu</li>
+                        <li><span class="tag num">Số từ</span> - Từ chỉ số lượng</li>
+                        <li><span class="tag part">Trợ từ</span> - Từ hỗ trợ ngữ pháp</li>
+                        <li><span class="tag unk">Không xác định</span> - Từ chưa phân loại được</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h2>Thống kê</h2>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-font"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Tổng số từ</span>
+                            <span id="totalWords" class="stat-value">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-building"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Danh từ</span>
+                            <span id="nounCount" class="stat-value">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-running"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Động từ</span>
+                            <span id="verbCount" class="stat-value">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-palette"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Tính từ</span>
+                            <span id="adjCount" class="stat-value">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-arrows-alt"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Trạng từ</span>
+                            <span id="advCount" class="stat-value">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 - Demo Phân Loại Từ Loại Tiếng Việt | Đại Học</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
