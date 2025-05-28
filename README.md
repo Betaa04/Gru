@@ -37,3 +37,29 @@
 ```bash
 git clone https://github.com/Betaa04/Gru.git
 cd Gru
+
+2. Tạo môi trường ảo (tùy chọn)
+bash
+Sao chép
+Chỉnh sửa
+python -m venv venv
+source venv/bin/activate   # Đối với macOS/Linux
+venv\Scripts\activate      # Đối với Windows
+3. Cài đặt các thư viện phụ thuộc
+bash
+Sao chép
+Chỉnh sửa
+pip install -r requirements.txt
+4. Chạy ứng dụng
+Nếu dùng Streamlit:
+
+bash
+Sao chép
+Chỉnh sửa
+streamlit run app.py
+Nếu dùng Flask:
+
+bash
+Sao chép
+Chỉnh sửa
+python app.py
